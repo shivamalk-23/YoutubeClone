@@ -1,0 +1,33 @@
+*{
+margin: 0;
+padding: 0;
+font-family: "Roboto", sans-serif;
+}
+.category{
+    overflow-x: scroll;
+    
+}
+.category::-webkit-scrollbar{
+    display: none;
+}
+.react-player {
+    height: 77vh !important;
+    width: 100% !important;
+  }
+.title{
+    margin: 0 120px;
+
+}
+.videodisplay{
+    border-radius: 15px;
+    margin: 0 20px;
+}
+.highlight{
+    color: #d500f9;
+}
+.light{
+    color: white;
+}
+.dark{
+    color: black;
+}
