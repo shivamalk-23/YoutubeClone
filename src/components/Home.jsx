@@ -4,18 +4,24 @@ import { useEffect, useState } from "react"
 import { getvideo } from "../utils/GetVideo"
 import VideoCardElement from './VideoCard'
 import { Box } from '@mui/material'
-import Error from './Error'
+
 
 const Home = ({theme}) => {
 
-  useEffect(() => {
-    getvideo('home').
-      then(data => setvids(data))
-  }, [])
-
   const [vids, setvids] = useState([])
-  console.log(vids)
-  return (vids.length ===0 ? (
+  useEffect(() => {
+    getvideo('home')
+      .then(data => {
+        console.log('Fetched data:', data); // Log the fetched data
+        setvids(data);
+      })
+      .catch(error => {
+        console.error('Error fetching videos:', error); // Log any errors
+      });
+  }, []);
+  console.log('Videos state:', vids);
+  
+  return (vids.length !==0 ? (
     <Box sx={{ width: '100%',padding:4,backgroundColor:theme?'#f9f9f9':'#181818',color:theme?'black':'white' }}   >
       <h2 className='title'>Recommender Videos For <span className="highlight">You</span></h2>
       <Box sx={{ flexWrap: 'wrap', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'center' }}>
@@ -26,7 +32,9 @@ const Home = ({theme}) => {
 
       </Box>
     </Box>
-  ):<Error/>)
+  ):<Box sx={{display:'flex',justifyContent:'center',alignItems:'center',height:'0vh'}}>
+    Loading
+  </Box>)
 }
 
 export default Home
