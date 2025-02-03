@@ -12,7 +12,7 @@ export async function getDetails(word)
           cgeo: 'DE'
         },
         headers: {
-          'x-rapidapi-key': import.meta.env.REACT_APP_API_KEY,
+          'x-rapidapi-key': import.meta.env.VITE_REACT_APP_API_KEY,
           'x-rapidapi-host': 'yt-api.p.rapidapi.com'
         }
       };

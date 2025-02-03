@@ -11,7 +11,7 @@ export async function getStreaming(word){
     url: 'https://yt-api.p.rapidapi.com/search',
     params: {query: word},
     headers: {
-      'x-rapidapi-key': import.meta.env.REACT_APP_API_KEY,
+      'x-rapidapi-key': import.meta.env.VITE_REACT_APP_API_KEY,
       'x-rapidapi-host': 'yt-api.p.rapidapi.com'
     }
   };

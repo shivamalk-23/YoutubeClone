@@ -15,9 +15,10 @@ const Navbar = ({ toggleTheme, theme }) => {
         <Box sx={{display:'flex'}}>
           <Button sx={{ backgroundColor: theme ? 'white' : 'black', mx: 1 }} onClick={toggleTheme}>{theme ? 'Dark' : 'Light'}</Button>
           <Box sx={{background:'linear-gradient(to right , white,grey )',borderRadius:'10px'}}>
-            <input  type="text" style={{ backgroundColor: 'transparent',height:'100%', border: 'none' ,outline:'none',padding:'0 0 0 10px'}} onChange={e => setSearchTerm(e.target.value)} />
-            <Link to={searchTerm.length === 0 ? '' : `/search?query=${searchTerm}`}>
-              <Button><img src={search} alt="" height={'20px'} /></Button>
+          <Link  to={searchTerm.length === 0 ? '' : `/search?query=${searchTerm}`}>
+            <input   type="text" style={{ backgroundColor: 'transparent',height:'100%', border: 'none' ,outline:'none',padding:'0 0 0 10px'}} onChange={e => setSearchTerm(e.target.value)} />
+        
+              <Button ><img src={search} alt="" height={'20px'} /></Button>
             </Link>
           </Box>
         </Box>
