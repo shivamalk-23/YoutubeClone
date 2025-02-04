@@ -27,7 +27,7 @@ const SearchFeed = ({ theme }) => {
     return (
 
 
-        (vids.length !== 0 ? (<Box sx={{  padding: 4, color: theme ? 'black' : 'white' }} >
+        (vids.length !== 0 ? (<Box sx={{  color: theme ? 'black' : 'white' }} >
             <h2 className='title'>You Searched For <span className='highlight'>{query}</span></h2>
 
             <Box sx={{width:'80vw', flexWrap: 'wrap', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'center' }}>
