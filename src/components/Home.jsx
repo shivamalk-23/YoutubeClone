@@ -22,9 +22,9 @@ const Home = ({theme}) => {
   console.log('Videos state:', vids);
   
   return (vids.length !==0 ? (
-    <Box id='style-1' sx={{ padding:{xs:0.6,},backgroundColor:theme?'#f9f9f9':'#181818',color:theme?'black':'white' }}   >
+    <Box id='style-1' sx={{backgroundColor:theme?'#f9f9f9':'#181818',color:theme?'black':'white' }}   >
       <h2 className='title'>Recommended Videos For <span className="highlight">You</span></h2>
-      <Box sx={{width:'80vw' ,flexWrap: 'wrap', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'center' }}>
+      <Box sx={{width:'85vw' ,flexWrap: 'wrap', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'center' }}>
 
         {(vids?.map((each) => {
           return ((each.type === 'video') && <VideoCardElement key={each.videoId} theme={theme} detail={each} />)})

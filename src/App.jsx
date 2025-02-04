@@ -4,7 +4,6 @@ import Navbar from './components/Navbar'
 import FeedBar from './components/FeedBar'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
-import Error from './components/Error'
 import { Box, Button } from '@mui/material'
 import VideoDisplay from './components/VideoDisplay'
 import SearchFeed from './components/SearchFeed'
@@ -28,12 +27,12 @@ const App = () => {
            <Box sx={{display: 'flex',flexDirection:{xs:'column',lg:'row'} }}>
           <FeedBar theme={theme} />
            
-          <Box sx={{ backgroundColor:theme?'#f9f9f9':'#181818',color:theme?'black':'white' }}  >
+          <Box sx={{ backgroundColor:theme?'#f9f9f9':'#181818',color:theme?'black':'white',py:3 }}  >
           <Routes  >
-            {}
-              <Route path='/' element={<Home theme={theme} />} errorElement={<Error/>}  />
-              <Route path='/search' element={<SearchFeed theme={theme} errorElement={<Error/>}/>} />
-              <Route path='/video/:id' element={<VideoDisplay theme={theme} errorElement={<Error/>} />} />
+            
+              <Route path='/' element={<Home theme={theme} />}   />
+              <Route path='/search' element={<SearchFeed theme={theme} />} />
+              <Route path='/video/:id' element={<VideoDisplay theme={theme}  />} />
 
             </Routes>
             

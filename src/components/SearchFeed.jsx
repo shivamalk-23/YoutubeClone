@@ -4,7 +4,7 @@ import { useParams, useSearchParams } from 'react-router-dom'
 import { getStreaming } from '../utils/GetStreaming'
 import { Box } from '@mui/material'
 import VideoCardElement from './VideoCard'
-import Error from './Error'
+
 
 const SearchFeed = ({ theme }) => {
     const [vids, setvides] = useState([])
@@ -30,7 +30,7 @@ const SearchFeed = ({ theme }) => {
         (vids.length !== 0 ? (<Box sx={{  color: theme ? 'black' : 'white' }} >
             <h2 className='title'>You Searched For <span className='highlight'>{query}</span></h2>
 
-            <Box sx={{width:'80vw', flexWrap: 'wrap', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'center' }}>
+            <Box sx={{width:'85vw', flexWrap: 'wrap', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'center' }}>
 
                 {(vids?.map((each) => {
                     return (each.type === 'video' && <VideoCardElement theme={theme} key={each.videoId} detail={each} />)
