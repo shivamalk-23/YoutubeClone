@@ -23,7 +23,7 @@ const VideoDisplay = ({ theme }) => {
 
 
   return (
-    <Box sx={{ width:'80vw',height:{xs:'90vh',md:'90%'}, padding: { xs: 0.6, sm: 2 }, backgroundColor: theme ? '#f9f9f9' : '#181818', color: theme ? 'black' : 'white' }}  >
+    <Box sx={{ width:'85vw',height:{xs:'90vh',md:'90%'}, padding: { xs: 0.6, sm: 2 }, backgroundColor: theme ? '#f9f9f9' : '#181818', color: theme ? 'black' : 'white' }}  >
 
 
       <Box sx={{ width: { xs: '90vw', lg: '90%' }, height: { xs: '30vh', sm: '50vh', md: '70vh', lg: '70vh' } }}>
