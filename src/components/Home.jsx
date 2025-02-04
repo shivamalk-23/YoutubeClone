@@ -22,9 +22,9 @@ const Home = ({theme}) => {
   console.log('Videos state:', vids);
   
   return (vids.length !==0 ? (
-    <Box sx={{ width: '100%',padding:4,backgroundColor:theme?'#f9f9f9':'#181818',color:theme?'black':'white' }}   >
-      <h2 className='title'>Recommender Videos For <span className="highlight">You</span></h2>
-      <Box sx={{ flexWrap: 'wrap', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'center' }}>
+    <Box id='style-1' sx={{ padding:{xs:0.6,sm:2},backgroundColor:theme?'#f9f9f9':'#181818',color:theme?'black':'white' }}   >
+      <h2 className='title'>Recommended Videos For <span className="highlight">You</span></h2>
+      <Box sx={{width:'80vw' ,flexWrap: 'wrap', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'center' }}>
 
         {(vids?.map((each) => {
           return ((each.type === 'video') && <VideoCardElement key={each.videoId} theme={theme} detail={each} />)})
@@ -32,9 +32,9 @@ const Home = ({theme}) => {
 
       </Box>
     </Box>
-  ):<Box sx={{display:'flex',justifyContent:'center',alignItems:'center',height:'0vh'}}>
-    Loading
-  </Box>)
+  ):<Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90vh',width:'90vw' }}>
+              Loading
+          </Box>)
 }
 
 export default Home

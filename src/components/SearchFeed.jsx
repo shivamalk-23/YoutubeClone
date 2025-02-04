@@ -27,17 +27,17 @@ const SearchFeed = ({ theme }) => {
     return (
 
 
-        (vids.length !== 0 ? (<Box sx={{ width: '100%', padding: 4, color: theme ? 'black' : 'white' }} >
+        (vids.length !== 0 ? (<Box sx={{  padding: 4, color: theme ? 'black' : 'white' }} >
             <h2 className='title'>You Searched For <span className='highlight'>{query}</span></h2>
 
-            <Box sx={{ flexWrap: 'wrap', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'center' }}>
+            <Box sx={{width:'80vw', flexWrap: 'wrap', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'center' }}>
 
                 {(vids?.map((each) => {
                     return (each.type === 'video' && <VideoCardElement theme={theme} key={each.videoId} detail={each} />)
                 }))}
 
             </Box>
-        </Box>) : <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>
+        </Box>) : <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90vh',width:'90vw' }}>
             Loading
         </Box>)
 

@@ -19,16 +19,16 @@ const App = () => {
     setTheme(prev=>{return !prev})
   }
   return (
-    <div  >
+    <div   id='style-1' >
 
           <BrowserRouter>
 
 
           <Navbar toggleTheme={toggleTheme}  theme={theme}/> 
-           <Box sx={{ display: 'flex',flexDirection:{xs:'column',lg:'row'} }}>
-          <FeedBar />
+           <Box sx={{display: 'flex',flexDirection:{xs:'column',lg:'row'} }}>
+          <FeedBar theme={theme} />
            
-          <Box sx={{ width: '100%',padding:4,backgroundColor:theme?'#f9f9f9':'#181818',color:theme?'black':'white' }}  >
+          <Box sx={{ backgroundColor:theme?'#f9f9f9':'#181818',color:theme?'black':'white' }}  >
           <Routes  >
             {}
               <Route path='/' element={<Home theme={theme} />} errorElement={<Error/>}  />
