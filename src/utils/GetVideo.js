@@ -15,7 +15,7 @@ console.log(JSON.stringify(import.meta.env.VITE_REACT_APP_API_KEY))
 
 try {
 	const response = await axios.request(options);
-  console.log(response.data.data)
+  
 	return response.data.data
 } catch (error) {
 	return 'error'

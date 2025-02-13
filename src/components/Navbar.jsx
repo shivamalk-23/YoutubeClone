@@ -26,7 +26,7 @@ const Navbar = ({ toggleTheme, theme }) => {
             <Button ><img src={search} alt="" height={'20px'} /></Button>
           </Link>
         </Box>
-        <Button sx={{ display: { xs: 'none', md: 'block' }, backgroundColor: theme ? 'white' : 'black', mx: { md: 1 } }} onClick={toggleTheme}>{theme ? 'Dark' : 'Light'}</Button>
+        <Button sx={{ display: { xs: 'none', md: 'block' }, backgroundColor: theme ? 'white' : 'black', mx: { md: 1 } ,color:theme?'black':'white'}} onClick={toggleTheme}>{theme ? 'Dark' : 'Light'}</Button>
         <Button variant='none' sx={{ display: { xs: 'block', md: 'none' },margin:0, mx:1,
     backgroundColor: 'transparent',padding: 0,minWidth: 'auto',
      minHeight: 'auto','& img': {width: '20px',height: 'auto',},}} onClick={toggleTheme}>{theme ? <img src={moon} alt="" /> : <img src={sun} />}</Button>
